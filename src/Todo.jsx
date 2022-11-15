@@ -19,7 +19,7 @@ return ()=>{
 
 const getData = async()=>{
     
-        const data = await fetch(`http://localhost:8080/users`)
+        const data = await fetch(`https://riskrestask.herokuapp.com/data`)
         .then((d) => d.json()
         );
        setTodos(data);
@@ -30,31 +30,31 @@ const getData = async()=>{
         clickToSelect:true
       }
 const columns = [
-    {
-dataField:"title",
-text:"Project name",
-filter:textFilter(),
-},
-{
-    dataField:"status",
-    text:"status",
+  {
+    dataField:"Project_Name",
+    text:"Project name",
+    filter:textFilter(),
     },
     {
-        dataField:"last",
-        text:"Last Update"
+        dataField:"Status",
+        text:"status",
         },
         {
-            dataField:"resouces",
-            text:"Resources"
+            dataField:"LastUpdate",
+            text:"Last Update"
             },
             {
-                dataField:"time",
-                text:"Project Timeline"
+                dataField:"Resources",
+                text:"Resources"
                 },
                 {
-                    dataField:"esti",
-                    text:"Estimation"
-                    }
+                    dataField:"ProjectTimeline",
+                    text:"Project Timeline"
+                    },
+                    {
+                        dataField:"Estimation",
+                        text:"Estimation"
+                        }
                 
 ]
 
